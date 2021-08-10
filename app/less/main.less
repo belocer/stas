@@ -1,0 +1,48 @@
+@import 'smart-grid';
+@import 'fonts';
+@import 'var';
+@import 'mixin';
+@import 'header';
+@import 'menu';
+@import 'tabs';
+
+html {
+  .reset();
+  font-size: 10px;
+  font-family: 'OS Regular', sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background: #424242;
+  margin: 0;
+}
+
+.debug-grid {
+  .debug(rgba(0, 0, 0, 0.23), 1px solid rgba(83, 83, 28, 0.66));
+  pointer-events: none;
+  z-index: 100;
+}
+
+.container {
+  display: block;
+  .wrapper()
+}
+
+.flex-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.h100 {
+  height: 100%;
+  .md(height, auto);
+}
+
+.aic {
+  align-items: center;
+  .md(align-items, normal);
+}
