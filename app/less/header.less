@@ -48,7 +48,7 @@
 
 .header__content {
   overflow: hidden;
-  width: 100vw;
+  //width: 100vw;
   height: 100vh;
   background: url("../img/dest/pipe2.webp") center no-repeat;
   background-size: cover;
@@ -210,6 +210,7 @@ form.form {
 
   .sm-block({
     min-height: 280px;
+    min-width: calc(100% - 10px);
   });
 
   .form__header {
@@ -249,8 +250,8 @@ form.form {
   .form__input {
     outline: none;
     border-top: none;
-    border-left: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke;
+    border-left: 1px solid rgba(245, 245, 245, .56);
+    border-right: 1px solid rgba(245, 245, 245, .56);
     border-bottom: 1px solid #e2e2e2;
     width: 286px;
     text-indent: 7px;
@@ -393,6 +394,10 @@ form.form {
   .md-block({
     margin-top: 15px;
     margin-bottom: 15px;
+  });
+
+  .lmd-block({
+    margin-top: 0;
   });
 
   .social__item {
