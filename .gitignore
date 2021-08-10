@@ -2,5 +2,5 @@
 /node_modules/*
 /dist/*
 package-lock.json
-/app/img/src/
-/app/fonts/
+/app/img/src/*
+/app/fonts/*
