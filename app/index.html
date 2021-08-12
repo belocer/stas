@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-<header class="header">
+<header class="header" id="header">
     <!-- Logo Menu -->
     <div class="first-line">
         <div class="container">
@@ -15,11 +15,11 @@
                 <a href="/" class="logo"><span class="logo__bold">Ст</span><span class="logo__thin">ас</span></a>
                 <nav class="menu">
                     <ul class="menu__container">
-                        <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Цены</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                        <li class="menu__item"><a href="#header" class="menu__link">Главная</a></li>
+                        <li class="menu__item"><a href="#whyThis" class="menu__link">О нас</a></li>
+                        <li class="menu__item"><a href="#price" class="menu__link">Цены</a></li>
+                        <li class="menu__item"><a href="#say" class="menu__link">Отзывы</a></li>
+                        <li class="menu__item"><a href="#contact" class="menu__link">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -54,7 +54,7 @@
                         <!--<span class="label-span">Телефон</span>-->
                         <input type="text" id="form__phone" class="form__input" placeholder="Телефон">
                     </label>
-                    <button class="form__btn">Жду звонка</button>
+                    <button class="form__btn" type="button">Жду звонка</button>
                 </form>
             </div>
         </div>
@@ -72,13 +72,13 @@
 
                 <ul class="social__list">
                     <li class="social__item">
-                        <a href="#" class="social__link">
+                        <a href="https://vk.com/html_css_js_php_postgresql" class="social__link" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="#icon-vk"/>
                             </svg>
                         </a>
                     <li class="social__item">
-                        <a href="#" class="social__link">
+                        <a href="#" class="social__link" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="#icon-facebook2"/>
                             </svg>
@@ -90,13 +90,13 @@
                             </svg>
                         </a>
                     <li class="social__item">
-                        <a href="#" class="social__link">
+                        <a href="#" class="social__link" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="#icon-twitter"/>
                             </svg>
                         </a>
                     <li class="social__item">
-                        <a href="skype:belocerkovecden" class="social__link">
+                        <a href="skype:belocerkovecden" class="social__link" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="#icon-skype"/>
                             </svg>
@@ -311,7 +311,7 @@
         </div>
     </div>
     <!-- Why this is awesome -->
-    <div class="whyThis">
+    <div class="whyThis" id="whyThis">
         <div class="container">
             <div class="flex-block aic">
                 <div class="whyThis__header">
@@ -357,7 +357,7 @@
         </div>
     </div>
     <!-- Price -->
-    <div class="price">
+    <div class="price" id="price">
         <div class="container">
             <div class="flex-block aic price__wrap">
                 <div class="price__header">
@@ -418,7 +418,7 @@
         </div>
     </div>
     <!-- Say -->
-    <div class="say">
+    <div class="say" id="say">
         <div class="container">
             <div class="flex-block aic say__wrap">
                 <div class="say__header">
@@ -559,8 +559,79 @@
     </div>
 </main>
 
-<footer class="footer">
-
+<footer class="footer" id="contact">
+    <!-- Contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="flex-block aic contact__wrap">
+                <div class="contact__header">
+                    <h2 class="contact__headerH2">CONTACT US</h2>
+                    <h3 class="contact__headerH3">Lorem ipsum dolor sit amet, consectetur adipiscing elite.</h3>
+                </div>
+                <form action="#" class="contact__form">
+                    <div class="contact__form1Block">
+                        <label for="form__name-footer" class="form__label">
+                            <input type="text" id="form__name-footer" class="form__input-footer" placeholder="Имя">
+                        </label>
+                        <label for="form__email-footer" class="form__label">
+                            <input type="text" id="form__email-footer" class="form__input-footer" placeholder="Email">
+                        </label>
+                        <label for="form__phone-footer" class="form__label">
+                            <input type="text" id="form__phone-footer" class="form__input-footer" placeholder="Телефон">
+                        </label>
+                    </div>
+                    <div class="contact__form2Block">
+                        <label for="form__msg-footer" class="form__label">
+                            <textarea name="" id="form__msg-footer" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                        </label>
+                    </div>
+                    <div class="wrap-form-btn">
+                        <button class="contact__form-btn" type="button">Отправить сообщение</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Social -->
+    <div class="footer__social">
+        <div class="container">
+            <div class="social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a href="https://vk.com/html_css_js_php_postgresql" class="social__link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-vk"/>
+                            </svg>
+                        </a>
+                    <li class="social__item">
+                        <a href="#" class="social__link">
+                            <svg class="icon">
+                                <use xlink:href="#icon-facebook2"/>
+                            </svg>
+                        </a>
+                    <li class="social__item">
+                        <a href="tg://msg?text=@denisdeveloper" class="social__link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-telegram"/>
+                            </svg>
+                        </a>
+                    <li class="social__item">
+                        <a href="#" class="social__link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-twitter"/>
+                            </svg>
+                        </a>
+                    <li class="social__item">
+                        <a href="skype:belocerkovecden" class="social__link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-skype"/>
+                            </svg>
+                        </a>
+                </ul>
+            </div>
+            <div class="footer__copyright">© 2021 Denis Belotserkovets</div>
+        </div>
+    </div>
 </footer>
 
 <!-- SVG DATA -->
@@ -609,7 +680,6 @@
         </symbol>
     </defs>
 </svg>
-
 <script src="js/app.min.js"></script>
 </body>
 </html>

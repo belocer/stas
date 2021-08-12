@@ -11,9 +11,7 @@
   text-align: center;
   margin: 0 auto 51px;
 
-  .lmd-block({
-    margin: 0 auto 31px;
-  });
+  .lmd(margin, 0 auto 31px);
 
   h2 {
     display: block;
@@ -21,9 +19,7 @@
     font-size: 36px;
     color: #212121;
 
-    .md-block({
-      font-size: 30px;
-    });
+    .md(font-size, 30px);
 
     &::after {
       content: '';
@@ -44,6 +40,6 @@
   h3 {
     font-family: 'OS Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
     font-size: 14px;
-    color: #86878b;
+    color: @p-text;
   }
 }

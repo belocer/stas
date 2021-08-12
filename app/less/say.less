@@ -22,7 +22,7 @@
   margin-top: 29px;
 
   p.say__p {
-    color: #86878b;
+    color: @p-text;
     padding: 24px 12px;
     font-family: 'OS Regular',AdobeInvisFont,MyriadPro-Regular,sans-serif;
     font-size: 14px;
@@ -41,7 +41,7 @@
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-top: 20px solid #f5f5f5;
+      border-top: 20px solid @bg;
     }
   }
 }
@@ -63,13 +63,13 @@
 
   .say__user-container-data {
     .say__name-user {
-      color: #333;
+      color: @h-text;
       font-family: 'OS Bold',AdobeInvisFont,MyriadPro-Regular,sans-serif;
       font-size: 20px;
     }
 
     .say__profession {
-      color: #86878b;
+      color: @p-text;
       font-family: 'OS Regular',AdobeInvisFont,MyriadPro-Regular,sans-serif;
       font-size: 14px;
     }
@@ -91,16 +91,18 @@ button[data-action="stop"],
 
 .tns-nav button {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  max-width: 10px;
-  max-height: 10px;
-  min-width: 10px;
-  min-height: 10px;
-  background: #f5f5f5;
+  width: 10px !important;
+  height: 12px !important;
+  max-width: 10px !important;
+  max-height: 12px !important;
+  min-width: 10px !important;
+  min-height: 12px !important;
+  background: @bg;
   text-align: center;
   border-radius: 50%;
   border: none;
+  outline: none;
+  overflow: hidden;
 
   &:not(:last-child) {
     margin-right: 10px;
