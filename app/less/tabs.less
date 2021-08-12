@@ -94,13 +94,9 @@
     flex-wrap: wrap;
     align-items: center;
 
-    .md-block({
+    .lmd-block({
       justify-content: center;
     });
-  }
-
-  .active-tabs-item {
-    display: flex;
   }
 }
 
@@ -175,4 +171,12 @@
     order: 1;
     padding-left: 0;
   });
+
+  img {
+    max-width: 435px;
+  }
+}
+
+.tabs__content-list .active-tabs-item {
+  display: flex;
 }

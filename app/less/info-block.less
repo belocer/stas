@@ -1,0 +1,158 @@
+.info {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .lmd-block({
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
+
+  .info__wrap {
+    align-items: center;
+
+    .md-block({
+      text-align: center;
+      justify-content: center;
+    });
+  }
+}
+
+.info:nth-child(even) {
+  background: #ffffff;
+
+  .info__img {
+    order: 1;
+
+    .md-block({
+      margin-bottom: 20px;
+    });
+
+    img {
+      max-width: 435px;
+    }
+  }
+
+  .info__text {
+    order: 2;
+    margin-left: 20px;
+
+    .md-block({
+      margin-left: 0;
+    });
+  }
+}
+
+.info:nth-child(odd) {
+  background: #f5f5f5;
+
+  .info__img {
+    order: 2;
+    margin-left: 20px;
+
+    .md-block({
+      margin-left: 0;
+      margin-top: 20px;
+    });
+
+    img {
+      max-width: 435px;
+    }
+  }
+
+  .info__text {
+    order: 1;
+  }
+}
+
+.info__img {
+  max-width: 437px;
+
+  .md-block({
+    min-width: 100%;
+  });
+}
+
+.info__text {
+  max-width: 415px;
+
+  .info__header {
+    font-family: 'OS Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    font-size: 20px;
+    color: #212121;
+    margin-bottom: 20px;
+    text-align: left;
+
+    .md-block({
+      text-align: center;
+    });
+
+    &::after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 2px;
+      background: @main-color;
+      margin-top: 20px;
+
+      .md-block({
+        text-align: center;
+        margin: 20px auto 0;
+      });
+    }
+  }
+
+  .info__p {
+    color: #86878B;
+    font-family: 'OS Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    font-size: 14px;
+  }
+}
+
+.info__list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  
+  .md-block({
+    display: block;
+  });
+
+  .info__wrapIcon {
+    flex-shrink: 2;
+    border: 2px solid @main-color;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 40px;
+    max-width: 40px;
+
+    .md-block({
+      margin: 0 auto;
+    });
+
+    svg.icon {
+      fill: @main-color;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.info__listTextRight {
+  flex-shrink: 5;
+  max-width: 345px;
+
+  .md-block({
+    margin: 20px auto 0;
+  });
+
+  .info__list-h3 {
+    font-family: 'OS SemiBold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    font-size: 14px;
+    color: #212121;
+    margin-bottom: 12px;
+  }
+}
