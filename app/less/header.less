@@ -92,7 +92,7 @@
   .header-content__h1 {
     max-width: 516px;
     font-size: 36px;
-    color: white;
+    color: #fff;
     font-family: 'R Regular', sans-serif;
     margin-top: 6px;
     padding-bottom: 30px;
@@ -151,7 +151,7 @@
 .header-content__text {
   max-width: 465px;
   font-family: 'R Light', sans-serif;
-  color: white;
+  color: #fff;
   font-size: 1.4rem;
   line-height: 23px;
   letter-spacing: 0.3px;
@@ -209,7 +209,10 @@ form.form {
     min-width: 300px;
   });
 
-  .sm-block({
+  .lmd(min-width, 300px);
+  .sm(min-height, 280px);
+
+  .xs-block({
     min-height: 280px;
     min-width: calc(100% - 10px);
   });

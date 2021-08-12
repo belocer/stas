@@ -118,6 +118,10 @@ const smartGridConf = {
             width: '720px',
             fields: '10px'
         },
+        lxs: {
+            width: '500px',
+            fields: '10px'
+        },
         xs: {
             width: '380px',
             fields: '10px'

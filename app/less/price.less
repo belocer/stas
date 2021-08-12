@@ -1,0 +1,106 @@
+.price__wrap {
+  flex-wrap: wrap;
+}
+
+.price {
+  background: #f5f5f5;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .lmd-block({
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
+}
+
+.price__header {
+  .block__header;
+}
+
+.price__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  .lg-block({
+    justify-content: space-evenly;
+    align-items: flex-start;
+  });
+}
+
+.price__item {
+  flex-basis: 340px;
+  margin-top: 29px;
+
+  .price__itemH3 {
+    color: #fff;
+    background: #333;
+    padding: 21px 0;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'OS Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+  }
+
+  .price__price {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #333;
+
+    .price__currency {
+      font-size: 35px;
+      font-family: 'R Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+      color: #fff;
+    }
+
+    .price__number {
+      font-size: 65px;
+      font-family: 'R Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+      color: #fff;
+    }
+  }
+
+  .price__itemH4 {
+    font-size: 14px;
+    font-family: 'OS SemiBold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    color: #999;
+    background: #333;
+    text-align: center;
+    padding-bottom: 21px;
+  }
+
+  .price__mainColor {
+    background: @main-color;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'OS Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    min-height: 5px;
+    font-size: 14px;
+
+    .price__mainColorText {
+      padding: 10.5px 0;
+      display: block;
+    }
+  }
+
+  .price__list-options {
+    background: #fff;
+
+    li {
+      text-align: center;
+      padding: 14px 0;
+      font-family: 'OS Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+      color: #86878b;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #f5f5f5;
+      }
+    }
+  }
+}

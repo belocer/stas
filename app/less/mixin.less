@@ -6,3 +6,44 @@
 .logoFZ(@fz) {
   font-size: @fz;
 }
+
+.block__header {
+  text-align: center;
+  margin: 0 auto 51px;
+
+  .lmd-block({
+    margin: 0 auto 31px;
+  });
+
+  h2 {
+    display: block;
+    font-family: 'R Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    font-size: 36px;
+    color: #212121;
+
+    .md-block({
+      font-size: 30px;
+    });
+
+    &::after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 2px;
+      background: @main-color;
+      margin: 30px auto;
+      text-align: center;
+
+      .md-block({
+        text-align: center;
+        margin: 15px auto;
+      });
+    }
+  }
+
+  h3 {
+    font-family: 'OS Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
+    font-size: 14px;
+    color: #86878b;
+  }
+}
