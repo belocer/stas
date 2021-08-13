@@ -15,6 +15,7 @@ const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const del = require('del');
 const webp = require('gulp-webp');
+const babel = require('gulp-babel');
 
 function browsersync() {
     browserSync.init({
@@ -28,11 +29,17 @@ function browsersync() {
 
 function scripts() {
     return src([
-        'node_modules/jquery/dist/jquery.min.js',
+        'app/js/lib/tiny-slider.js',
         'app/js/app.js',
+        'app/js/menu.js',
     ])
-        .pipe(concat('app.min.js'))
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ["@babel/preset-env"]
+        }))
         .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(sourcemaps.write("."))
         .pipe(dest('app/js/'))
         .pipe(browserSync.stream());
 }

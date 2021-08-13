@@ -20,6 +20,18 @@
 
 .say__item {
   margin-top: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrap-content-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 273px;
+    margin: 0 auto;
+  }
 
   p.say__p {
     color: @p-text;
@@ -30,6 +42,7 @@
     max-width: 273px;
     position: relative;
     border-radius: 5px;
+    text-align: left;
 
     &::after {
       content: '';
@@ -50,8 +63,9 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: 25px;
   align-items: center;
+  width: 100%;
+  margin-top: 20px;
 
   .wrap__img-user {
     width: 70px;
@@ -62,6 +76,7 @@
   }
 
   .say__user-container-data {
+    
     .say__name-user {
       color: @h-text;
       font-family: 'OS Bold',AdobeInvisFont,MyriadPro-Regular,sans-serif;
