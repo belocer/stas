@@ -15,7 +15,7 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
     clearTimeout(debounceTimeOutScroll)
-    debounceTimeOutScroll = setTimeout(onScrollHideMenu, 300)
+    debounceTimeOutScroll = setTimeout(onScrollHideMenu, 150)
 })
 
 /* Скрыть показать меню */
