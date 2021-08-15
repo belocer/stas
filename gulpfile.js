@@ -32,6 +32,7 @@ function scripts() {
         'app/js/lib/tiny-slider.js',
         'app/js/app.js',
         'app/js/menu.js',
+        'app/js/anim.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(babel({

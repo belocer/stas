@@ -1,0 +1,181 @@
+.anim {
+  background: @bg;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .lmd-block({
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
+}
+
+.anim__header {
+  width: 100%;
+  .block__header;
+}
+
+/* Бегущая строка */
+.wrap-ticker-protective {
+  max-width: 100%;
+  overflow: hidden;
+  border-top: 2px solid @main-color;
+  border-bottom: 2px solid @main-color;
+  margin: 50px auto;
+  max-height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  background: #ffffff;
+
+  .run-row {
+    animation: 60s linear 0s infinite normal text_left;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+
+  .ticker-protective {
+    display: flex;
+
+    .ticker-protective__text {
+      font-weight: 600;
+      font-size: 24px;
+      white-space: nowrap;
+      margin: 0 20px;
+      font-family: 'OS Bold',sans-serif;
+      color: @h-text;
+    }
+
+    .ticker-protective__icon {
+      display: flex;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 60px;
+        width: 20px;
+        background: @main-color;
+        transform: rotate(30deg) translateY(-10px);
+      }
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 60px;
+        width: 20px;
+        background: @h-text;
+        transform: rotate(30deg) translateY(-10px);
+      }
+    }
+  }
+}
+
+@keyframes reduce {
+  100% {
+    width: 0;
+    height: 0;
+    min-width: 0;
+    min-height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes text_left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-7200px);
+  }
+}
+
+/* Глаз */
+.anim__eye {
+  min-width: 100%;
+  padding: 0;
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap_eye {
+  display: inline-block;
+  height: 107px;
+  width: 107px;
+  border-radius: 107px;
+  background: #282937;
+  line-height: 130px;
+  z-index: 10;
+  opacity: 1;
+  transition: all 0s;
+
+  .wrap_border_dashed {
+    position: relative;
+    transition: all 0s;
+
+    #eye {
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      text-align: center;
+      background: url('../img/dest/eye_not_pupil.png') center center / cover no-repeat no-repeat;
+      line-height: 57px;
+      transition: all 0s;
+
+      transform: translate(23px, -2px);
+    }
+
+    .border_dashed {
+      border: 2px dashed @main-color;
+      height: 120px;
+      width: 120px;
+      border-radius: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: linear rotate_dashed infinite 8s;
+      position: absolute;
+      right: -8px;
+      bottom: 15px;
+      transition: all 0s;
+    }
+  }
+}
+
+/* Анимация вращения пунктирного круга вокруг глаза */
+@keyframes rotate_dashed {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#pupil {
+  height: 21px;
+  width: 21px;
+  border-radius: 21px;
+  background: @main-color;
+  display: inline-block;
+  position: relative;
+  transform: translate(0px, -9px);
+  transition: all .2s;
+
+  #dot {
+    content: '';
+    height: 7px;
+    width: 7px;
+    display: inline-block;
+    border-radius: 7px;
+    background: #282937;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+}
