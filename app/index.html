@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СТАС</title>
+    <title>PINE</title>
     <link rel="stylesheet" href="css/app.min.css?ver=0.0.5">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="first-line">
         <div class="container">
             <div class="flex-block">
-                <a href="/" class="logo"><span class="logo__bold">Ст</span><span class="logo__thin">ас</span></a>
+                <a href="/" class="logo"><span class="logo__bold">Pi</span><span class="logo__thin">ne</span></a>
                 <nav class="menu">
                     <ul class="menu__container">
                         <li class="menu__item"><a href="#header" class="menu__link menu__link-active">Главная</a></li>
@@ -30,8 +30,10 @@
         <div class="container h100">
             <div class="header-content-df h100 aic">
                 <div class="header-content">
-                    <div class="header-content__logo"><span class="logo__bold">Ст</span><span
-                            class="logo__thin">ас</span></div>
+                    <div class="header-content__logo">
+                        <span class="logo__bold">Pi</span>
+                        <span class="logo__thin">ne</span>
+                    </div>
                     <h1 class="header-content__h1">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h1>
                     <p class="header-content__text">
                         Скачать прайс с актуальными ценами, на частотные товары, можно по кнопке ниже. За подробностями,
@@ -40,21 +42,21 @@
                     <a href="#" class="header-content__btn" download>Скачать</a>
                 </div>
 
-                <form action="#" class="form">
+                <form action="#" class="form" id="header__form">
                     <h2 class="form__header">Свяжитесь со мной, - <span class="orange-color">Срочно!</span></h2>
                     <label for="form__name" class="form__label">
-                        <!--<span class="label-span">Имя</span>-->
                         <input type="text" id="form__name" class="form__input" placeholder="Имя">
+                        <span class="form__errors"></span>
                     </label>
                     <label for="form__email" class="form__label">
-                        <!--<span class="label-span">Email</span>-->
                         <input type="text" id="form__email" class="form__input" placeholder="Email">
+                        <span class="form__errors"></span>
                     </label>
                     <label for="form__phone" class="form__label">
-                        <!--<span class="label-span">Телефон</span>-->
                         <input type="text" id="form__phone" class="form__input" placeholder="Телефон">
+                        <span class="form__errors"></span>
                     </label>
-                    <button class="form__btn" type="button">Жду звонка</button>
+                    <button class="form__btn" type="button" disabled="disabled">Жду звонка</button>
                 </form>
             </div>
         </div>

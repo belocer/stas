@@ -77,7 +77,6 @@
   .md(background, rgba(117, 117, 117, .8));
 }
 
-.form,
 .header-content {
   position: relative;
   z-index: 2;
@@ -192,119 +191,6 @@
     flex-direction: column;
     align-items: center;
   })
-}
-
-form.form {
-  max-width: 360px;
-  background: #fff;
-  border-radius: 3px;
-  position: relative;
-  overflow: hidden;
-  min-height: 360px;
-  box-shadow: 2px 2px 5px rgba(50, 50, 50, .2);
-
-  .md-block({
-    display: block;
-    margin: 30px auto;
-    min-height: 350px;
-    min-width: 300px;
-  });
-
-  .lmd(min-width, 300px);
-  .sm(min-height, 280px);
-
-  .xs-block({
-    min-height: 280px;
-    min-width: calc(100% - 10px);
-  });
-
-  .form__header {
-    font-size: 20px;
-    padding: 12px 18px;
-    font-family: 'OS Bold', sans-serif;
-    background: @bg;
-    margin-bottom: 58px;
-    text-align: center;
-
-    .sm-block({
-      font-size: 17px;
-      padding: 8px 0;
-      margin-bottom: 30px;
-    });
-
-    .orange-color {
-      color: @main-color;
-      text-transform: uppercase;
-    }
-  }
-
-  .form__label {
-    display: block;
-    margin: 35px auto 0;
-    position: relative;
-    z-index: 3;
-    padding: 0 35px;
-
-    .sm-block({
-      text-align: center;
-      margin: 30px auto 0;
-      padding: 0;
-    });
-  }
-
-  .form__input {
-    outline: none;
-    border-top: none;
-    border-left: 1px solid rgba(245, 245, 245, .56);
-    border-right: 1px solid rgba(245, 245, 245, .56);
-    border-bottom: 1px solid #e2e2e2;
-    width: 286px;
-    text-indent: 7px;
-    font-family: 'R Light', sans-serif;
-
-    &::placeholder {
-      color: #bdbdbd;
-    }
-
-    .sm-block({
-      width: 230px;
-      text-indent: 5px;
-      font-size: 14px;
-    });
-  }
-
-  .label-span {
-    position: relative;
-    z-index: 3;
-    display: block;
-    margin-left: 8px;
-    margin-bottom: -22px;
-    color: #b3b3b3;
-  }
-
-  .form__btn {
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    color: #fff;
-    border: none;
-    outline: none;
-    background: @main-color;
-    height: 55px;
-    display: block;
-    cursor: pointer;
-    font-size: 15px;
-    font-family: 'OS SemiBold', sans-serif;
-    transition: background .2s;
-  }
-
-  .form__btn:hover {
-    transition: background .2s;
-    background: darken(@main-color, 10%);
-  }
 }
 
 .header__social {
