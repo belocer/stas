@@ -11,6 +11,8 @@ window.addEventListener('load', () => {
 
     let form__errors = document.querySelectorAll('.form__errors');
 
+    let form__input = header__form.querySelectorAll('.form__input')
+
     let form__btn = document.querySelector('.form__btn');
 
     let arrErrors = [];
@@ -24,11 +26,11 @@ window.addEventListener('load', () => {
         phoneFormat: 'Указанный номер не соответствует формату!',
         phoneEmpty: 'Не заполнено поле, - номера телефона!',
         emailFormat: 'Указанный email не соответствует формату!',
-        emailEmpty: 'Не заполнено поле, - E-mail!',
+        emptyField: 'Не заполнено поле, - ',
         nameEmpty: 'Не верно заполнено поле, - Имя!',
     }
 
-    header__form.querySelectorAll('.form__input').forEach(item => item.addEventListener('input', validateForm));
+    form__input.forEach(item => item.addEventListener('input', validateForm));
 
     function validateForm(e) {
         e.preventDefault()
@@ -37,19 +39,38 @@ window.addEventListener('load', () => {
         validateFormController(regName, form__name, label__name, libErrorsText.nameEmpty)
     }
 
+    header__form.addEventListener('submit', validateFormSubmit);
+
+    function validateFormSubmit(e) {
+        e.preventDefault();
+        form__input.forEach(item => {
+            if (testForEmptiness(item.value)) {
+                arrErrors.push({
+                    place: item.id,
+                    textError: libErrorsText.emptyField + item.getAttribute('placeholder')
+                });
+                switchBtn(false);
+                form__btn.textContent = 'Жду звонка';
+            } else {
+                switchBtn(true);
+                form__btn.textContent = 'Отправлено!';
+            }
+            showErrors();
+        })
+    }
+
     function validateFormController(regularExpression, field, label, errorsText) {
         if (!regexMatchCheck(regularExpression, field.value) && field.value.length > 2) {
             if (!arrErrors.find(item => item.place === field.id)) {
                 arrErrors.push({place: field.id, textError: errorsText})
             }
-            showErrors(label.querySelector('.form__errors'));
+            showErrors();
             switchBtn(false);
         } else {
             switchBtn(true);
-            deleteElArrErrors(field)
-            showErrors(label.querySelector('.form__errors'));
+            deleteElArrErrors(field);
+            showErrors();
         }
-        console.log(arrErrors);
     }
 
     function deleteElArrErrors(el) {
@@ -60,7 +81,7 @@ window.addEventListener('load', () => {
         })
     }
 
-    function showErrors(label) {
+    function showErrors() {
         if (arrErrors.length > 0) {
             arrErrors.forEach(item => {
                 let ul = document.createElement('Ul');
@@ -76,11 +97,7 @@ window.addEventListener('load', () => {
     }
 
     function testForEmptiness(str) {
-        return str.length !== 0;
-    }
-
-    function checkForLength(str) {
-        return str.length;
+        return str.length === 0;
     }
 
     function regexMatchCheck(reg, inp) {
