@@ -56,7 +56,7 @@
                         <input type="text" id="form__phone" class="form__input" placeholder="Телефон">
                         <span class="form__errors"></span>
                     </label>
-                    <button class="form__btn" type="submit" disabled="disabled">Жду звонка</button>
+                    <button class="form__btn" type="submit" disabled="disabled">Отправить сообщение</button>
                 </form>
             </div>
         </div>
@@ -584,28 +584,31 @@
             <div class="flex-block aic contact__wrap">
                 <div class="contact__header">
                     <h2 class="contact__headerH2">CONTACT US</h2>
-                    <h3 class="contact__headerH3">Lorem ipsum dolor sit amet, consectetur adipiscing elite.</h3>
+                    <h3 class="contact__headerH3">Lorem ipsum dolor sit amet, consecrated advising elite.</h3>
                 </div>
                 <form action="#" class="contact__form">
                     <div class="contact__form1Block">
-                        <label for="form__name-footer" class="form__label">
-                            <input type="text" id="form__name-footer" class="form__input-footer" placeholder="Имя">
+                        <label for="contact__inp-name" class="contact__label">
+                            <input type="text" id="contact__inp-name" class="contact__inp form__input" placeholder="Имя">
+                            <span class="form__errors"></span>
                         </label>
-                        <label for="form__email-footer" class="form__label">
-                            <input type="text" id="form__email-footer" class="form__input-footer" placeholder="Email">
+                        <label for="contact__inp-mail" class="contact__label">
+                            <input type="text" id="contact__inp-mail" class="contact__inp form__input" placeholder="Email">
+                            <span class="form__errors"></span>
                         </label>
-                        <label for="form__phone-footer" class="form__label">
-                            <input type="text" id="form__phone-footer" class="form__input-footer" placeholder="Телефон">
+                        <label for="contact__inp-phone" class="contact__label">
+                            <input type="text" id="contact__inp-phone" class="contact__inp form__input" placeholder="Телефон">
+                            <span class="form__errors"></span>
                         </label>
                     </div>
                     <div class="contact__form2Block">
-                        <label for="form__msg-footer" class="form__label">
-                            <textarea name="form__msg-footer" id="form__msg-footer" cols="30" rows="10"
+                        <label for="contact__textarea" class="contact__label">
+                            <textarea name="form__msg-footer" id="contact__textarea" cols="30" rows="10"
                                       placeholder="Сообщение"></textarea>
                         </label>
                     </div>
                     <div class="wrap-form-btn">
-                        <button class="contact__form-btn" type="button">Отправить сообщение</button>
+                        <button class="contact__btn" type="button" disabled="disabled">Отправить сообщение</button>
                     </div>
                 </form>
             </div>
