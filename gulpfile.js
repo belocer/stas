@@ -33,7 +33,9 @@ function scripts() {
         'app/js/app.js',
         'app/js/menu.js',
         'app/js/anim.js',
+        'app/js/ValidationForm.js',
         'app/js/validation-form.js',
+        'app/js/Tabs.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(babel({
