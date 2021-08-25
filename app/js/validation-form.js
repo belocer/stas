@@ -1,17 +1,20 @@
 class ValidationForm {
-    constructor(objForClass) {
+    constructor(formData) {
         this.debounceTimeOut = 0;
         this.arrErrors = [];
-        this.input__name = objForClass.input__name;
-        this.input__email = objForClass.input__email;
-        this.input__phone = objForClass.input__phone;
-        this.formTag = objForClass.formTag;
-        this.label__name = objForClass.label__name;
-        this.label__email = objForClass.label__email;
-        this.label__phone = objForClass.label__phone;
+        this.input__name = formData.input__name;
+        this.input__email = formData.input__email;
+        this.input__phone = formData.input__phone;
+        this.formTag = formData.formTag;
+        this.label__name = formData.label__name;
+        this.label__email = formData.label__email;
+        this.label__phone = formData.label__phone;
         this.form__errors = this.formTag.querySelectorAll('.form__errors');
         this.form__input = this.formTag.querySelectorAll('.form__input');
-        this.form__btn = objForClass.form__btn;
+        this.form__btn = formData.form__btn;
+        this.buttonTextSend = formData.buttonTextSend || 'Отправить сообщение';
+        this.buttonTextSent = formData.buttonTextSent || 'Отправлено';
+
         this.regPhone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/; // телефон
         this.regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // Email
         this.regName = /^[a-zA-Zа-яА-Яё ,.'-]+$/i; // Имя
@@ -21,7 +24,7 @@ class ValidationForm {
             emailFormat: 'Указанный email не соответствует формату!',
             nameEmpty: 'Не верно заполнено поле, - Имя!',
             emptyField: 'Не заполнено поле, - ',
-        }
+        };
 
         this.form__input.forEach(item => {
             item.addEventListener('input', () => {
@@ -44,7 +47,7 @@ class ValidationForm {
                 this.arrErrors.push({place: field.id, textError: errorText});
             }
             this.switchBtn(false);
-            this.form__btn.textContent = 'Отправить сообщение';
+            this.form__btn.textContent = this.buttonTextSend;
         } else {
             this.switchBtn(true);
             this.deleteElArrErrors(field);
@@ -66,9 +69,9 @@ class ValidationForm {
                     textError: this.libErrorsText.emptyField + item.getAttribute('placeholder')
                 });
                 this.switchBtn(false);
-                this.form__btn.textContent = 'Отправить сообщение';
+                this.form__btn.textContent = this.buttonTextSend;
             } else {
-                this.form__btn.textContent = 'Отправлено!';
+                this.form__btn.textContent = this.buttonTextSent;
                 this.switchBtn(false);
             }
             this.showErrors();
@@ -134,6 +137,8 @@ window.addEventListener('load', () => {
         label__email: document.querySelector('label[for="contact__inp-mail"]'),
         label__phone: document.querySelector('label[for="contact__inp-phone"]'),
         form__btn: document.querySelector('.contact__btn'),
+        buttonTextSend: 'Жду звонка',
+        buttonTextSent: 'Sent - Типо отправлено',
     };
     new ValidationForm(objForClassFromFooter);
 })
