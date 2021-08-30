@@ -30,12 +30,11 @@ function browsersync() {
 function scripts() {
     return src([
         'app/js/lib/tiny-slider.js',
-        'app/js/app.js',
-        'app/js/menu.js',
-        'app/js/anim.js',
+        'app/js/Menu.js',
         'app/js/ValidationForm.js',
-        'app/js/validation-form.js',
         'app/js/Tabs.js',
+        'app/js/app.js',
+        'app/js/anim.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(babel({

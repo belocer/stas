@@ -34,12 +34,3 @@ class Tabs {
         e.target.classList.add('active-tabs-btn')
     }
 }
-
-window.addEventListener('load', () => {
-    let tabsData = {
-        tabs__btn: document.querySelectorAll('.tabs__btn'),
-        tabs__contentItems: document.querySelectorAll('.tabs__content-item'),
-        duration: 700,
-    }
-    new Tabs(tabsData);
-})
