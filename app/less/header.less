@@ -25,14 +25,25 @@
     .MTMB(10px);
   });
 
+  .logo__icon {
+    width: 30px;
+    height: 54px;
+    background: url(../img/dest/logo.webp) center center no-repeat;
+    background-size: contain;
+
+    .sm-block({
+      height: 35px;
+    });
+  }
+
   .logo__bold {
     font-family: 'R Bold', sans-serif;
     color: @main-color;
     text-transform: uppercase;
-    .logoFZ(36px);
+    .logoFZ(18px);
 
     .sm-block({
-      .logoFZ(28px);
+      .logoFZ(16px);
     });
   }
 
@@ -40,10 +51,10 @@
     font-family: 'R Thin', sans-serif;
     color: #fff;
     text-transform: uppercase;
-    .logoFZ(36px);
+    .logoFZ(18px);
 
     .sm-block({
-      .logoFZ(28px);
+      .logoFZ(16px);
     });
   }
 }
@@ -52,7 +63,7 @@
   overflow: hidden;
   //width: 100vw;
   height: 100vh;
-  background: url("../img/dest/pipe2.webp") center no-repeat;
+  background: url("../img/dest/light-bulbs-5488573.webp") center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -64,7 +75,8 @@
 
 .header__content::after {
   content: '';
-  background: rgba(250, 250, 250, .6);
+  //background: rgba(250, 250, 250, .6);
+  background: rgba(0, 0, 0, .69);
   position: absolute;
   top: 0;
   left: 0;
@@ -91,7 +103,9 @@
 
   .header-content__h1 {
     max-width: 516px;
-    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-size: 19px;
     color: #fff;
     font-family: 'R Regular', sans-serif;
     margin-top: 6px;
@@ -133,9 +147,9 @@
     font-family: 'R Bold', sans-serif;
     color: @main-color;
     text-transform: uppercase;
-    .logoFZ(85px);
+    .logoFZ(44px);
     .md-block({
-      font-size: 50px;
+      font-size: 32px;
     });
   }
 
@@ -143,9 +157,9 @@
     font-family: 'R Thin', sans-serif;
     color: #fff;
     text-transform: uppercase;
-    .logoFZ(85px);
+    .logoFZ(44px);
     .md-block({
-      font-size: 50px;
+      font-size: 32px;
     });
   }
 }
@@ -219,8 +233,8 @@
   width: 40px;
   height: 40px;
   stroke-width: 0;
-  stroke: #d4d4d4;
-  fill: #d4d4d4;
+  stroke: @p-text;
+  fill: @p-text;
   opacity: .8;
   transition: fill .2s;
 
