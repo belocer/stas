@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PINE</title>
-    <link rel="stylesheet" href="css/app.min.css?ver=0.0.12">
+    <link rel="stylesheet" href="css/app.min.css?ver=0.0.13">
+    <link rel="icon" href="https://googleman.ru/stas/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://googleman.ru/stas/favicon.png" type="image/x-icon">
 </head>
 <body>
 <header class="header" id="header">
@@ -12,7 +14,8 @@
     <div class="first-line">
         <div class="container">
             <div class="flex-block">
-                <a href="/" class="logo"><i class="logo__icon"></i><span class="logo__bold">Комплект</span><span class="logo__thin">снаб</span></a>
+                <a href="/" class="logo"><i class="logo__icon"></i><span class="logo__bold">Комплект</span><span
+                        class="logo__thin">снаб</span></a>
                 <nav class="menu">
                     <ul class="menu__container">
                         <li class="menu__item"><a href="#header" class="menu__link menu__link-active">Главная</a></li>
@@ -34,7 +37,8 @@
                         <span class="logo__bold">Комплект</span>
                         <span class="logo__thin">снаб</span>
                     </div>
-                    <h1 class="header-content__h1">ООО «Комплектснаб» приглашает к взаимовыгодному сотрудничеству в сфере
+                    <h1 class="header-content__h1">ООО «Комплектснаб» приглашает к взаимовыгодному сотрудничеству в
+                        сфере
                         комплексных поставок электротехнической продукции.</h1>
                     <p class="header-content__text">
                         Скачать прайс с актуальными ценами, на частотные товары, можно по кнопке ниже. За подробностями,
@@ -572,26 +576,74 @@
     </div>
 </main>
 <footer class="footer" id="contact">
+
+    <div class="contactInfo">
+
+        <div class="container">
+            <div class="flex-block aic contactInfo__wrap">
+                <div class="contactInfo__header">
+                    <h2 class="contactInfo__headerH2">Наши контакты</h2>
+                    <h3 class="contactInfo__headerH3">Пишите звоните, мы всегда рады сотрудничеству</h3>
+                </div>
+                <address class="contactInfo__address">
+                    <ul class="contactInfo__list">
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">Наименование :</span> ООО
+                            "КомплектСнаб"
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">Директор :</span> Кипреев
+                            Станислав Владимирович
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">Телефон :</span>
+                            <a href="tel:+(861)217-37-07" class="contactInfo__link">&nbsp;&nbsp;&nbsp;8&nbsp;(861)&nbsp;217&nbsp;37&nbsp;07</a>
+                            <a href="tel:+79288406792" class="contactInfo__link">&nbsp;&nbsp;&nbsp;+7&nbsp;(928)&nbsp;840&nbsp;67&nbsp;92</a>
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">Индекс :</span> 350072
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">E-mail :</span>
+                            <a href="mailto:energoproekt-krd@bk.ru" class="contactInfo__link">&nbsp;&nbsp;&nbsp;energoproekt-krd@bk.ru</a>
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">Адрес :</span> г.
+                            Краснодар, ул. Солнечная, 31, 3-этаж
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">Skype :</span> <a
+                                href="skype:kipreevsw" class="contactInfo__link">&nbsp;&nbsp;&nbsp;kipreevsw</a></li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">ОГРН :</span> 114 231 100
+                            51 00
+                        </li>
+                        <li class="contactInfo__item"><span class="contactInfo__denomination">ИНН :</span> 23 111 71 443
+                        </li>
+                    </ul>
+                </address>
+                <div class="map__wrap">
+                    <div id="map" style="min-height: 100%; min-width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact -->
     <div class="contact">
         <div class="container">
             <div class="flex-block aic contact__wrap">
                 <div class="contact__header">
-                    <h2 class="contact__headerH2">CONTACT US</h2>
+                    <h2 class="contact__headerH2">Написать нам</h2>
                     <h3 class="contact__headerH3">Lorem ipsum dolor sit amet, consecrated advising elite.</h3>
                 </div>
                 <form action="#" class="contact__form" title="Мы рады с Вами пообщаться!)">
                     <div class="contact__form1Block">
                         <label for="contact__inp-name" class="contact__label">
-                            <input type="text" id="contact__inp-name" class="contact__inp form__input" placeholder="Имя" required>
+                            <input type="text" id="contact__inp-name" class="contact__inp form__input" placeholder="Имя"
+                                   required>
                             <span class="form__errors"></span>
                         </label>
                         <label for="contact__inp-mail" class="contact__label">
-                            <input type="email" id="contact__inp-mail" class="contact__inp form__input" placeholder="Email" required>
+                            <input type="email" id="contact__inp-mail" class="contact__inp form__input"
+                                   placeholder="Email" required>
                             <span class="form__errors"></span>
                         </label>
                         <label for="contact__inp-phone" class="contact__label">
-                            <input type="tel" id="contact__inp-phone" class="contact__inp form__input" placeholder="Телефон" required>
+                            <input type="tel" id="contact__inp-phone" class="contact__inp form__input"
+                                   placeholder="Телефон" required>
                             <span class="form__errors"></span>
                         </label>
                     </div>
@@ -607,6 +659,7 @@
                 </form>
             </div>
         </div>
+
     </div>
     <!-- Social -->
     <div class="footer__social">
@@ -765,6 +818,8 @@
             </div>
         </div>
     </div>
+
+
 </div>
 <!-- SVG DATA -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
@@ -809,6 +864,62 @@
         </symbol>
     </defs>
 </svg>
-<script src="js/app.min.js?ver=0.0.12"></script>
+<script>
+    if (typeof (YaMapsWP) === "undefined") {
+        let YaMapsWP = {}, YMlisteners = {}
+    }
+</script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    ymaps.ready(init)
+
+    let placemarks = [
+
+            {
+                latitude: 44.994366,
+                longitude: 39.079302,
+                hintContent: "ООО «Комплектснаб»",
+                balloonContent: "ООО «Комплектснаб» г. Краснодар, ул. Им. Снесарева, д.18/1, помещение 14"
+            },
+        ],
+        geoObjects = []
+
+    function init() {
+        let map = new ymaps.Map(`map`, {
+            center: [44.994366, 39.079302],
+            zoom: 11,
+            controls: [`zoomControl`],
+            behaviors: [`drag`]
+        })
+
+        for (let i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+                {
+                    hintContent: placemarks[i].hintContent,
+                    balloonContent: placemarks[i].balloonContent
+                },
+                {
+                    iconLayout: `default#image`,
+                    iconImageHref: 'https://googleman.ru/map-logo.png',
+                    iconImageSize: [120, 120],
+                })
+        }
+
+        let clusterer = new ymaps.Clusterer({
+            clusterIcons: [
+                {
+                    href: 'https://googleman.ru/map-logo.png',
+                    size: [30, 30],
+                    offset: [-50, -50]
+                }
+            ],
+            clusterIconContentLayout: null
+        })
+
+        map.geoObjects.add(clusterer)
+        clusterer.add(geoObjects)
+    }
+</script>
+<script src="js/app.min.js?ver=0.0.13"></script>
 </body>
 </html>
