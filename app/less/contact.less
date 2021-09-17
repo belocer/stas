@@ -133,6 +133,8 @@
   .md-block({
     margin: 0 auto 50px auto;
   });
+
+  .lxs(min-width, 300px);
 }
 
 .contactInfo__list {
@@ -144,12 +146,15 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+    .lxs(font-size, 1.2rem);
 
     .contactInfo__link {
       color: @h-text;
       font-size: 1.6rem;
       font-family: 'OS Light',AdobeInvisFont,MyriadPro-Regular,sans-serif;
       text-decoration: none;
+
+      .lxs(font-size, 1.2rem);
     }
 
     .contactInfo__denomination {
@@ -170,6 +175,8 @@
   .md-block({
     margin: 0 auto;
   });
+
+  .lxs(min-width, 300px);
 
   #map {
     width: 550px;
