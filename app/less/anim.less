@@ -18,8 +18,8 @@
 .wrap-ticker-protective {
   max-width: 100%;
   overflow: hidden;
-  border-top: 2px solid @main-color;
-  border-bottom: 2px solid @main-color;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
   margin: 0 auto;
   max-height: 35px;
   display: flex;
@@ -44,7 +44,7 @@
       white-space: nowrap;
       margin: 0 20px;
       font-family: 'OS Bold',sans-serif;
-      color: @h-text;
+      color: var(--h-text);
     }
 
     .ticker-protective__icon {
@@ -55,7 +55,7 @@
         display: inline-block;
         height: 60px;
         width: 20px;
-        background: @main-color;
+        background: var(--main-color);
         transform: rotate(30deg) translateY(-10px);
       }
       &::before {
@@ -129,7 +129,7 @@
     }
 
     .border_dashed {
-      border: 2px dashed @main-color;
+      border: 2px dashed var(--main-color);
       height: 120px;
       width: 120px;
       border-radius: 120px;
@@ -161,7 +161,7 @@
   height: 21px;
   width: 21px;
   border-radius: 21px;
-  background: @main-color;
+  background: var(--main-color);
   display: inline-block;
   position: relative;
   transform: translate(0px, -9px);

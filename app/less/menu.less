@@ -71,7 +71,7 @@
       text-align: center;
 
       &:hover {
-        color: @main-color;
+        color: var(--main-color);
         transition: all .2s;
       }
 
@@ -86,7 +86,7 @@
       content: '';
       height: 2px;
       width: 0%;
-      background-color: @main-color;
+      background-color: var(--main-color);
       transition: all .2s;
     }
   }
@@ -129,7 +129,7 @@
 
 // Подсвечивание пункта меню по скроллу
 .menu__container .menu__item .menu__link.menu__link-active {
-  color: @main-color;
+  color: var(--main-color);
   transition: all .1s;
 
   &::after {

@@ -33,7 +33,7 @@
     border: none;
     outline: none;
     border-radius: 3px;
-    background: @main-color;
+    background: var(--main-color);
     color: #fff;
     font-family: 'OS SemiBold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
     text-align: center;
@@ -44,7 +44,7 @@
 
     &:hover {
       transition: background .2s;
-      background: darken(@main-color, 10%);
+      background: var(--hover-main-color);
     }
   }
 }
@@ -139,7 +139,7 @@
 
 .contactInfo__list {
   .contactInfo__item {
-    color: @h-text;
+    color: var(--h-text);
     font-size: 1.6rem;
     font-family: 'OS Light',AdobeInvisFont,MyriadPro-Regular,sans-serif;
 
@@ -149,7 +149,7 @@
     .lxs(font-size, 1.3rem);
 
     .contactInfo__link {
-      color: @h-text;
+      color: var(--h-text);
       font-size: 1.6rem;
       font-family: 'OS Light',AdobeInvisFont,MyriadPro-Regular,sans-serif;
       text-decoration: none;
@@ -158,7 +158,7 @@
     }
 
     .contactInfo__denomination {
-      color: @h-text;
+      color: var(--h-text);
       font-size: 1.6rem;
       font-family: 'R Bold',AdobeInvisFont,MyriadPro-Regular,sans-serif;
       text-transform: uppercase;

@@ -73,13 +73,13 @@
       cursor: pointer;
 
       &:hover {
-        background: @main-color;
+        background: var(--main-color);
         transition: background .2s;
       }
     }
 
     .active-tabs-btn {
-      background: @main-color;
+      background: var(--main-color);
     }
   }
 }
@@ -140,7 +140,7 @@
 
   .tabs__contentBtn {
     border-radius: 3px;
-    background: @main-color;
+    background: var(--main-color);
     color: #fff;
     font-family: 'OS SemiBold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
     text-align: center;
@@ -152,7 +152,7 @@
 
     &:hover {
       transition: background .2s;
-      background: darken(@main-color, 10%);
+      background: var(--hover-main-color);
     }
   }
 }

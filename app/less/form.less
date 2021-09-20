@@ -43,7 +43,7 @@ form.form {
     });
 
     .orange-color {
-      color: @main-color;
+      color: var(--main-color);
       text-transform: uppercase;
     }
   }
@@ -106,7 +106,7 @@ form.form {
     color: #fff;
     border: none;
     outline: none;
-    background: @main-color;
+    background: var(--main-color);
     height: 55px;
     display: block;
     cursor: pointer;
@@ -117,7 +117,7 @@ form.form {
 
   .form__btn:hover {
     transition: background .2s;
-    background: darken(@main-color, 10%);
+    background: var(--hover-main-color);
   }
 }
 
@@ -138,7 +138,7 @@ form.form {
     margin-top: 5px;
     display: inline-block;
     font-size: 11px;
-    color: darken(@main-color, 20%);
+    color: var(--hover-main-color);
 
     &:not(:last-child) {
       margin-right: 5px;

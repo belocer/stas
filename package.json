@@ -17,6 +17,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "browser-sync": "^2.26.12",
+    "critical": "^4.0.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

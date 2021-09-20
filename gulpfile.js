@@ -16,6 +16,7 @@ const newer = require('gulp-newer');
 const del = require('del');
 const webp = require('gulp-webp');
 const babel = require('gulp-babel');
+const critical = require('critical');
 
 function browsersync() {
     browserSync.init({
@@ -96,6 +97,7 @@ function buildcopy() {
     return src([
         'app/css/**/*.min.css',
         'app/js/**/*.min.js',
+        'app/js/**/*.min.js.map',
         'app/img/dest/**/*',
         'app/**/*.html',
     ], {base: 'app'})
@@ -147,12 +149,60 @@ function grid() {
     smartGrid('app/' + preprocessor, smartGridConf)
 }
 
+const paramsCritical = {
+    // Inline the generated critical-path CSS
+    // - true generates HTML
+    // - false generates CSS
+    inline: true,
+
+    // Your base directory
+    base: './dist',
+
+    // HTML source file
+    src: '/index.html',
+
+    // Your CSS Files (optional)
+    css: ['/css/app.min.css'],
+
+    // Viewport width
+    width: 1920,
+
+    // Viewport height
+    height: 720,
+
+    // Исключения
+    /*include: [
+        'footer'
+    ],*/
+
+    // Output results to file
+    target: {
+        css: '/css/critical.css',
+        uncritical: '/css/async.css',
+    },
+
+    // Extract inlined styles from referenced stylesheets
+
+
+    // Игнорирование CSS правил
+    ignore: {
+        atrule: ['@font-face'],
+        //rule: [/some-regexp/],
+        //decl: (node, value) => /big-image\.png/.test(value),
+    },
+};
+
+function criticalStart() {
+    return critical.generate(paramsCritical);
+}
+
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
 exports.cleanimg = cleanimg;
+exports.criticalStart = criticalStart;
 exports.grid = grid;
-exports.build = series(cleandist, styles, scripts, images, buildcopy);
+exports.build = series(cleandist, styles, scripts, images, buildcopy, /*criticalStart*/);
 
 exports.default = parallel(styles, scripts, browsersync, startwatch);
