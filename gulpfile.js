@@ -150,19 +150,16 @@ function grid() {
 }
 
 const paramsCritical = {
-    // Inline the generated critical-path CSS
-    // - true generates HTML
-    // - false generates CSS
-    inline: true,
+    inline: false,
 
     // Your base directory
-    base: './dist',
+    base: './',
 
     // HTML source file
-    src: '/index.html',
+    src: 'dist/index.html',
 
     // Your CSS Files (optional)
-    css: ['/css/app.min.css'],
+    css: ['dist/css/app.min.css'],
 
     // Viewport width
     width: 1920,
@@ -177,8 +174,8 @@ const paramsCritical = {
 
     // Output results to file
     target: {
-        css: '/css/critical.css',
-        uncritical: '/css/async.css',
+        css: 'dist/css/critical.css',
+        uncritical: 'dist/css/async.css',
     },
 
     // Extract inlined styles from referenced stylesheets
