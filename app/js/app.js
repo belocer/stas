@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    // Валидация формы
+    // Валидация формы в header
     let objForClass = {
         input__name: document.getElementById('form__name'),
         input__email: document.getElementById('form__email'),
@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
     };
     new ValidationForm(objForClass);
 
+    // Валидация формы в footer
     let objForClassFromFooter = {
         input__name: document.getElementById('contact__inp-name'),
         input__email: document.getElementById('contact__inp-mail'),
@@ -24,7 +25,29 @@ window.addEventListener('load', () => {
         buttonTextSend: 'Жду звонка',
         buttonTextSent: 'Sent - Типо отправлено',
     };
-    new ValidationForm(objForClassFromFooter);
+    let resultValidationForm = new ValidationForm(objForClassFromFooter);
+
+    // Send E-mail fetch
+    if (resultValidationForm.arrErrors.length === 0) {
+        let dataByEmail = {
+            arrInput: '#header__form input', // передача массива с инпутами
+            btnSend: '#header__form .form__btn', // кнопка отправить
+            arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
+            block_thanks: ['#header__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+            thanks_btn: '#header__form .messageSuccess__closeBTN' // Кнопка хорошо, которая уберёт блок "спасибо"
+        }
+        new SendByEmail(dataByEmail);
+
+        let dataByEmailContact = {
+            arrInput: '.contact__form .form__input', // передача массива с инпутами
+            btnSend: '.contact__form .contact__btn', // кнопка отправить
+            arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
+            block_thanks: ['.contact__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+            thanks_btn: '#contact__formBTN' // Кнопка хорошо, которая уберёт блок "спасибо"
+        }
+        new SendByEmail(dataByEmailContact);
+    }
+
 
     // Табы
     let tabsData = {

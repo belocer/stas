@@ -71,8 +71,10 @@ class ValidationForm {
                 this.switchBtn(false);
                 this.form__btn.textContent = this.buttonTextSend;
             } else {
+                // Валидация пройдена можно отправлять
                 this.form__btn.textContent = this.buttonTextSent;
                 this.switchBtn(false);
+                return true;
             }
             this.showErrors();
         })

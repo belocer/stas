@@ -36,6 +36,7 @@ function scripts() {
         'app/js/Tabs.js',
         'app/js/app.js',
         'app/js/anim.js',
+        'app/js/SendByEmail.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(babel({
