@@ -48,7 +48,6 @@ window.addEventListener('load', () => {
         new SendByEmail(dataByEmailContact);
     }
 
-
     // Табы
     let tabsData = {
         tabs__btn: document.querySelectorAll('.tabs__btn'),
