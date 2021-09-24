@@ -201,6 +201,6 @@ exports.images = images;
 exports.cleanimg = cleanimg;
 exports.criticalStart = criticalStart;
 exports.grid = grid;
-exports.build = series(cleandist, styles, scripts, images, buildcopy, /*criticalStart*/);
+exports.build = series(cleandist, styles, scripts, images, buildcopy);
 
 exports.default = parallel(styles, scripts, browsersync, startwatch);

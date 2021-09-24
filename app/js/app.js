@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
             btnSend: '.contact__form .contact__btn', // кнопка отправить
             arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
             block_thanks: ['.contact__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
-            thanks_btn: '#contact__formBTN' // Кнопка хорошо, которая уберёт блок "спасибо"
+            thanks_btn: '.contact__form .messageSuccess__closeBTN' // Кнопка хорошо, которая уберёт блок "спасибо"
         }
         new SendByEmail(dataByEmailContact);
     }
