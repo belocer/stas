@@ -52,15 +52,15 @@
                 <form action="#" class="form" id="header__form" title="Мы хотим Вам перезвонить">
                     <h2 class="form__header">Свяжитесь со мной, - <span class="orange-color">Срочно!</span></h2>
                     <label for="form__name" class="form__label">
-                        <input type="text" id="form__name" class="form__input" placeholder="Имя" required>
+                        <input type="text" id="form__name" class="form__input" placeholder="Имя" required value="Denus" name="form__name">
                         <span class="form__errors"></span>
                     </label>
                     <label for="form__email" class="form__label">
-                        <input type="email" id="form__email" class="form__input" placeholder="Email" required>
+                        <input type="email" id="form__email" class="form__input" placeholder="Email" required value="asdf@sd.sd" name="form__email">
                         <span class="form__errors"></span>
                     </label>
                     <label for="form__phone" class="form__label">
-                        <input type="tel" id="form__phone" class="form__input" placeholder="Телефон" required>
+                        <input type="tel" id="form__phone" class="form__input" placeholder="Телефон" required value="9283048594" name="form__phone">
                         <span class="form__errors"></span>
                     </label>
                     <button class="form__btn" type="submit" disabled="disabled">Отправить сообщение</button>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="messageNotSuccess__header">Сообщение НЕ отправлено!</div>
                         <p class="messageNotSuccess__p">Попробуйте через некоторое время,
-                            либо воспользуйтесь другим способом связи.</p>
+                            либо воспользуйтесь другим способом связи. <div class="text-error"></div></p>
                     </div>
                 </form>
             </div>
@@ -683,7 +683,7 @@
                     <h3 class="contact__headerH3">Lorem ipsum dolor sit amet, consecrated advising elite.</h3>
                 </div>
 
-                <form action="#" class="contact__form" title="Мы рады с Вами пообщаться!)">
+                <form action="#" class="contact__form" title="Мы рады с Вами пообщаться!)" method="post">
                     <div class="contact__form1Block">
                         <label for="contact__inp-name" class="contact__label">
                             <input type="text" id="contact__inp-name" class="contact__inp form__input"
@@ -728,7 +728,7 @@
                         </div>
                         <div class="messageNotSuccess__header">Сообщение НЕ отправлено!</div>
                         <p class="messageNotSuccess__p">Попробуйте через некоторое время,
-                            либо воспользуйтесь другим способом связи.</p>
+                            либо воспользуйтесь другим способом связи. <div class="text-error"></div></p>
                     </div>
                 </form>
 

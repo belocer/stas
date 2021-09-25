@@ -28,24 +28,32 @@ window.addEventListener('load', () => {
     let resultValidationForm = new ValidationForm(objForClassFromFooter);
 
     // Send E-mail fetch
-    if (resultValidationForm.arrErrors.length === 0) {
-        let dataByEmail = {
-            arrInput: '#header__form input', // передача массива с инпутами
-            btnSend: '#header__form .form__btn', // кнопка отправить
-            arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
-            block_thanks: ['#header__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
-            thanks_btn: '#header__form .messageSuccess__closeBTN' // Кнопка хорошо, которая уберёт блок "спасибо"
-        }
-        new SendByEmail(dataByEmail);
+    let dataByEmail = {
+        arrInput: '#header__form input', // передача массива с инпутами
+        btnSend: '#header__form .form__btn', // кнопка отправить
+        arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
+        block_thanks: ['#header__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+        block_error: ['#header__form .messageNotSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+        close_block_btn: ['#header__form .messageSuccess__closeBTN', '#header__form .messageNotSuccess__closeBTN'], // Кнопки с крестиком, которые уберут блок "спасибо"
+        text_error: '#header__form .text-error',
+    }
+    let SendByEmailHeader = new SendByEmail(dataByEmail);
 
-        let dataByEmailContact = {
-            arrInput: '.contact__form .form__input', // передача массива с инпутами
-            btnSend: '.contact__form .contact__btn', // кнопка отправить
-            arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
-            block_thanks: ['.contact__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
-            thanks_btn: '.contact__form .messageSuccess__closeBTN' // Кнопка хорошо, которая уберёт блок "спасибо"
-        }
-        new SendByEmail(dataByEmailContact);
+    let dataByEmailContact = {
+        arrInput: '.contact__form .form__input', // передача массива с инпутами
+        btnSend: '.contact__form .contact__btn', // кнопка отправить
+        arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
+        block_thanks: ['.contact__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+        block_error: ['.contact__form .messageNotSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+        close_block_btn: ['.contact__form .messageSuccess__closeBTN', '.contact__form .messageNotSuccess__closeBTN'], // Кнопки с крестиком, которые уберут блок "спасибо"
+        text_error: '.contact__form .text-error',
+    }
+    let SendByEmailFooter = new SendByEmail(dataByEmailContact);
+
+    // В случае если валидация не прошла, и ошибка не вывелась, воспользуюсь методом вывода ошибки от класса SendByEmail
+    if (resultValidationForm.arrErrors.length > 0) {
+        SendByEmailHeader.show_result_block('#header__form .messageNotSuccess')
+        SendByEmailFooter.show_result_block('.contact__form .messageNotSuccess')
     }
 
     // Табы

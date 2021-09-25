@@ -39,10 +39,10 @@ function scripts() {
         'app/js/SendByEmail.js',
     ])
         .pipe(sourcemaps.init())
-        .pipe(babel({
+        /*.pipe(babel({
             presets: ["@babel/preset-env"]
         }))
-        .pipe(uglify())
+        .pipe(uglify())*/
         .pipe(concat('app.min.js'))
         .pipe(sourcemaps.write("."))
         .pipe(dest('app/js/'))
