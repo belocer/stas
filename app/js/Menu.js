@@ -1,6 +1,7 @@
 class Menu {
     constructor(menuData) {
         this.debounceTimeOut = 0; // Переменная для Debounce
+        this.debounceTimeOutHideMenu = 0; // Переменная для Debounce для скрываем меню
         this.debounceTimeOutScroll = 0; // Переменная для Debounce скролл
         this.lastScrollTop = 0; // Для определения направления скролла
         this.windowInnerWidth = window.innerWidth; // Ширина экрана
@@ -15,12 +16,14 @@ class Menu {
         }
         if (window.location.href.indexOf('blog') === -1) {
             this.menu.addEventListener('click', this.toggleMenuMobile.bind(this));
-
             setTimeout(() => {
                 this.menu__link.forEach((item, index) => {
                     if (item.hash) {
                         let objName = item.hash.slice(1)
-                        this.arrOffsetTopItem.push({block: objName, px: document.querySelector(`${item.hash}`).offsetTop})
+                        this.arrOffsetTopItem.push({
+                            block: objName,
+                            px: document.querySelector(`${item.hash}`).offsetTop
+                        })
                     }
                 })
             }, 300)
@@ -57,7 +60,10 @@ class Menu {
         if (this.lastScrollTop > top && this.first_line.classList.contains('menu-scroll-hide')) {
             this.first_line.classList.remove('menu-scroll-hide')
         } else if (this.lastScrollTop < top && !this.first_line.classList.contains('menu-scroll-hide') && top > 1000) {
-            this.first_line.classList.add('menu-scroll-hide')
+            clearTimeout(this.debounceTimeOutHideMenu);
+            this.debounceTimeOutHideMenu = setTimeout(() => {
+                this.first_line.classList.add('menu-scroll-hide')
+            }, 1000);
         }
         this.lastScrollTop = top;
         this.switchItemMenu(top)

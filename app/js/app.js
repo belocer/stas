@@ -60,7 +60,8 @@ window.addEventListener('load', () => {
         }
         let SendByEmailFooter = new SendByEmail(dataByEmailContact);
 
-        // В случае если валидация не прошла, и ошибка не вывелась, воспользуюсь методом вывода ошибки от класса SendByEmail
+        // В случае если валидация не прошла, и ошибка не вывелась,
+        // воспользуюсь методом вывода ошибки от класса SendByEmail
         if (resultValidationForm.arrErrors.length > 0) {
             SendByEmailHeader.show_result_block('#header__form .messageNotSuccess')
             SendByEmailFooter.show_result_block('.contact__form .messageNotSuccess')
