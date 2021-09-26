@@ -34,15 +34,15 @@ function scripts() {
         'app/js/Menu.js',
         'app/js/ValidationForm.js',
         'app/js/Tabs.js',
-        'app/js/app.js',
+        //'app/js/app.js',
         'app/js/anim.js',
         'app/js/SendByEmail.js',
     ])
         .pipe(sourcemaps.init())
-        /*.pipe(babel({
+        .pipe(babel({
             presets: ["@babel/preset-env"]
         }))
-        .pipe(uglify())*/
+        .pipe(uglify())
         .pipe(concat('app.min.js'))
         .pipe(sourcemaps.write("."))
         .pipe(dest('app/js/'))

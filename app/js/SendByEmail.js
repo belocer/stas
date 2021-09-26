@@ -35,9 +35,9 @@ class SendByEmail {
             })
             .then(response => {
                 if (!response.res) {
-                    this.show_result_block(this.block_error)/*.bind(this)*/
+                    this.show_result_block(this.block_error)
                 } else {
-                    this.show_result_block(this.block_thanks)/*.bind(this)*/
+                    this.show_result_block(this.block_thanks)
                 }
 
                 if (response.error.length > 0) {

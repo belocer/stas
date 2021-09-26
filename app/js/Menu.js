@@ -13,15 +13,18 @@ class Menu {
         if (location.hash !== '') {
             this.scrollToTarget(location.hash);
         }
+        if (window.location.href.indexOf('blog') === -1) {
+            this.menu.addEventListener('click', this.toggleMenuMobile.bind(this));
 
-        this.menu.addEventListener('click', this.toggleMenuMobile.bind(this));
-
-        setTimeout(() => {
-            this.menu__link.forEach((item, index) => {
-                let objName = item.hash.slice(1)
-                this.arrOffsetTopItem.push({block: objName, px: document.querySelector(`${item.hash}`).offsetTop})
-            })
-        }, 300)
+            setTimeout(() => {
+                this.menu__link.forEach((item, index) => {
+                    if (item.hash) {
+                        let objName = item.hash.slice(1)
+                        this.arrOffsetTopItem.push({block: objName, px: document.querySelector(`${item.hash}`).offsetTop})
+                    }
+                })
+            }, 300)
+        }
 
         // Лаврик Подсвечивание пункта меню по скроллу
         this.menu.addEventListener('click', this.highlightItemMenu.bind(this));
@@ -37,7 +40,15 @@ class Menu {
         if (e.target.classList.contains('menu__link')) {
             this.menu.querySelector('.menu__link-active').classList.remove('menu__link-active');
             e.target.classList.add('menu__link-active');
-            this.scrollToTarget(e.target.hash);
+            if (e.target.hash) {
+                if (window.location.href.indexOf('blog') !== -1) {
+                    document.location.href = '/' + e.target.hash;
+                } else {
+                    this.scrollToTarget(e.target.hash);
+                }
+            } else {
+                window.location.href = e.target.href;
+            }
         }
     }
 
