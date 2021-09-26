@@ -27,6 +27,8 @@ class Menu {
                     }
                 })
             }, 300)
+        } else {
+            this.switchItemMenuBlog();
         }
 
         // Лаврик Подсвечивание пункта меню по скроллу
@@ -85,6 +87,19 @@ class Menu {
                 }
             }
         }
+    }
+
+    switchItemMenuBlog() {
+        this.menu__link.forEach((item) => {
+            if (window.location.href.indexOf('blog') !== -1) {
+                if (item.classList.contains('menu__link-active')) {
+                    item.classList.remove('menu__link-active')
+                }
+                if (item.textContent === 'Блог') {
+                    item.classList.add('menu__link-active');
+                }
+            }
+        })
     }
 
     getResize() {
