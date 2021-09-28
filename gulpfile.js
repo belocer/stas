@@ -34,7 +34,7 @@ function scripts() {
         'app/js/Menu.js',
         'app/js/ValidationForm.js',
         'app/js/Tabs.js',
-        'app/js/app.js',
+        //'app/js/app.js',
         'app/js/anim.js',
         'app/js/SendByEmail.js',
     ])
@@ -178,9 +178,6 @@ const paramsCritical = {
         css: 'dist/css/critical.css',
         uncritical: 'dist/css/async.css',
     },
-
-    // Extract inlined styles from referenced stylesheets
-
 
     // Игнорирование CSS правил
     ignore: {

@@ -71,10 +71,24 @@
       font-family: 'OS Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
       font-size: 15px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         background: var(--main-color);
         transition: background .2s;
+      }
+
+      svg.icon {
+        fill: #fff;
+        width: 40px;
+        height: 40px;
+        pointer-events: none;
+        .lmd-block({
+          width: 25px;
+          height: 25px;
+        });
       }
     }
 

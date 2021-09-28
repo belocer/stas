@@ -42,10 +42,11 @@ window.addEventListener('load', () => {
             arrInput: '#header__form input', // передача массива с инпутами
             btnSend: '#header__form .form__btn', // кнопка отправить
             arrHideElements: [], // массив элементов которые нужно скрыть, что бы показать блок спасибо
-            block_thanks: ['#header__form .messageSuccess', 'block'], // блок спасибо, дисплэй который покажет его
-            block_error: ['#header__form .messageNotSuccess', 'block'], // блок спасибо, дисплэй который покажет его
+            block_thanks: '#header__form .messageSuccess', // блок спасибо, дисплэй который покажет его
+            block_error: '#header__form .messageNotSuccess', // блок спасибо, дисплэй который покажет его
             close_block_btn: ['#header__form .messageSuccess__closeBTN', '#header__form .messageNotSuccess__closeBTN'], // Кнопки с крестиком, которые уберут блок "спасибо"
             text_error: '#header__form .text-error',
+            loading_block: '#header__form .loadingio-eclipse',
         }
         let SendByEmailHeader = new SendByEmail(dataByEmail);
 
@@ -57,6 +58,7 @@ window.addEventListener('load', () => {
             block_error: ['.contact__form .messageNotSuccess', 'block'], // блок спасибо, дисплэй который покажет его
             close_block_btn: ['.contact__form .messageSuccess__closeBTN', '.contact__form .messageNotSuccess__closeBTN'], // Кнопки с крестиком, которые уберут блок "спасибо"
             text_error: '.contact__form .text-error',
+            loading_block: '.contact__form .loadingio-eclipse',
         }
         let SendByEmailFooter = new SendByEmail(dataByEmailContact);
 
