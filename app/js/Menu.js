@@ -14,7 +14,7 @@ class Menu {
         if (location.hash !== '') {
             this.scrollToTarget(location.hash);
         }
-        if (window.location.href.indexOf('blog') === -1) {
+        if (window.location.href.split('/').length === 4) {
             this.menu.addEventListener('click', this.toggleMenuMobile.bind(this));
             setTimeout(() => {
                 this.menu__link.forEach((item, index) => {
@@ -42,11 +42,12 @@ class Menu {
 
     highlightItemMenu(e) {
         e.preventDefault();
-        if (e.target.classList.contains('menu__link')) {
+        if (e.target.classList.contains('menu__link') && this.menu.querySelector('.menu__link-active')) {
+
             this.menu.querySelector('.menu__link-active').classList.remove('menu__link-active');
             e.target.classList.add('menu__link-active');
             if (e.target.hash) {
-                if (window.location.href.indexOf('blog') !== -1) {
+                if (window.location.href.split('/').length !== 4) {
                     document.location.href = '/' + e.target.hash;
                 } else {
                     this.scrollToTarget(e.target.hash);

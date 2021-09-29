@@ -34,7 +34,7 @@ function scripts() {
         'app/js/Menu.js',
         'app/js/ValidationForm.js',
         'app/js/Tabs.js',
-        //'app/js/app.js',
+        'app/js/app.js',
         'app/js/anim.js',
         'app/js/SendByEmail.js',
     ])

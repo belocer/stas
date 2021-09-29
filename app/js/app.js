@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     };
     new Menu(menuData);
 
-    if (window.location.href.indexOf('blog') === -1) {
+    if (window.location.href.split('/').length === 4) {
         // Валидация формы в header
         let objForClass = {
             input__name: document.getElementById('form__name'),
@@ -84,9 +84,9 @@ window.addEventListener('load', () => {
             "items": 3,
             "mouseDrag": true,
             "autoplay": true,
-            "autoplayTimeout": 3000,
+            "autoplayTimeout": 3500,
             "swipeAngle": true,
-            "speed": 5000,
+            "speed": 300,
             "controls": false,
             "autoplayButton": false,
             "gutter": 10,
@@ -104,6 +104,17 @@ window.addEventListener('load', () => {
                     "items": 1
                 }
             },
+        });
+
+        tns({
+            "container": ".tns-slider-info",
+            "items": 1,
+            "speed": 300,
+            "autoplay": true,
+            "autoplayHoverPause": true,
+            "autoplayTimeout": 3500,
+            "swipeAngle": false,
+            "autoHeight": true,
         });
     }
 })
