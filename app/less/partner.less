@@ -3,7 +3,7 @@
 }
 
 .partner {
-  background: @bg;
+  background: var(--bg);
   padding-top: 100px;
   padding-bottom: 100px;
 
@@ -33,6 +33,9 @@
 .partner__item {
   flex-basis: 150px;
   margin: 20px;
+  opacity: 1;
+  transform: rotate(0) translateX(0);
+  transition: transform .7s;
 
   .lmd-block({
     flex-basis: 100px;
@@ -40,3 +43,14 @@
   });
 }
 
+.anim_transform_rotate:nth-child(odd) {
+  transition: transform .7s;
+  transform: rotate(180deg) translateX(-800px);
+  opacity: 0 !important;
+}
+
+.anim_transform_rotate:nth-child(even) {
+  transition: transform .7s;
+  transform: rotate(-180deg) translateX(800px);
+  opacity: 0 !important;
+}

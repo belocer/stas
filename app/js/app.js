@@ -77,6 +77,34 @@ window.addEventListener('load', () => {
         }
         new Tabs(tabsData);
 
+        // Анимация списка направлений
+        let animData = {
+            blockInWich: "#info_anim_list",
+            listAnimateElement: '.info__list-item',
+            animationClassCSS: 'anim_info_list',
+            addingSpeed: 100,
+            distanceToElement: 800
+        }
+        new ScrollAnimation(animData);
+
+        // Анимация списка брэндов
+        let animDataBrand = {
+            blockInWich: "#partner",
+            listAnimateElement: '.partner__item',
+            animationClassCSS: 'anim_transform_rotate'
+        }
+        new ScrollAnimation(animDataBrand);
+
+        // Анимация текста в инфо блоке
+        let animDataText = {
+            blockInWich: "#info_anim_text",
+            listAnimateElement: '.info__p',
+            animationClassCSS: 'anim_info_text',
+            addingSpeed: 200,
+            distanceToElement: 700
+        }
+        new ScrollAnimation(animDataText);
+
         /* Tiny Slider */
         tns({
             "container": ".tns-sl",
@@ -105,7 +133,6 @@ window.addEventListener('load', () => {
                 }
             },
         });
-
         tns({
             "container": ".tns-slider-info",
             "items": 1,
@@ -116,5 +143,16 @@ window.addEventListener('load', () => {
             "swipeAngle": false,
             "autoHeight": true,
         });
+        tns({
+            "container": ".tns-slider-infoSecond",
+            "items": 1,
+            "speed": 300,
+            "autoplay": true,
+            "autoplayHoverPause": true,
+            "autoplayTimeout": 3500,
+            "swipeAngle": false,
+            "autoHeight": true,
+        });
+
     }
 })

@@ -31,7 +31,7 @@ class Menu {
             this.switchItemMenuBlog();
         }
 
-        // Лаврик Подсвечивание пункта меню по скроллу
+        // Подсвечивание пункта меню по скроллу
         this.menu.addEventListener('click', this.highlightItemMenu.bind(this));
 
         window.addEventListener('scroll', () => {

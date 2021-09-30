@@ -36,6 +36,7 @@
     img {
       display: block;
       max-height: 100%;
+      max-width: 100%;
       //max-height: 550px;
       //.lmd(max-width, 435px);
       //.lxs(max-width, 380px);
@@ -49,11 +50,14 @@
 }
 
 .info:nth-child(odd) {
-  background: @bg;
+  background: var(--bg);
 
-  .wrap-info__img {
+  .wrap-tns-slider-infoSecond {
     order: 2;
-    margin-left: 20px;
+  }
+
+
+.info__img {
     box-shadow: 0 9px 35px rgba(50, 50, 50, .6);
 
     .lmd-block({
@@ -64,6 +68,7 @@
     img {
       display: block;
       max-height: 100%;
+      max-width: 100%;
       //max-height: 550px;
       //.lmd(max-width, 435px);
       //.lxs(max-width, 380px);
@@ -82,19 +87,20 @@
   overflow: hidden;
   width: auto;
 
-  /*.md-block({
+  .md-block({
     min-width: 100%;
-  });*/
+  });
 
   img {
     height: auto;
-    max-width: 437px;
     width: auto;
+    max-width: 100%;
   }
 }
 
 .info__text {
   max-width: 325px;
+  text-align: left;
 
   .md-block({
     max-width: 325px;
@@ -106,10 +112,9 @@
     font-size: 20px;
     color: #212121;
     margin-bottom: 20px;
-    text-align: left;
 
     .md-block({
-      text-align: center;
+      text-align: left;
     });
 
     &::after {
@@ -118,7 +123,8 @@
       width: 64px;
       height: 2px;
       background: var(--main-color);
-      margin-top: 20px;
+      margin-top: 30px;
+      text-align: left;
 
       .md-block({
         text-align: center;
@@ -128,10 +134,12 @@
   }
 
   .info__p {
-    color: @p-text;
+    color: var(--p-text);
     font-family: 'OS Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
     font-size: 14px;
     padding: 5px 0;
+    text-indent: 10px;
+    transition: transform 1s;
   }
 }
 
@@ -140,10 +148,9 @@
   justify-content: left;
   align-items: center;
   margin-bottom: 10px;
-
-  .md-block({
-    //align-items: flex-start;
-  });
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s;
 
   .info__wrapIcon {
     flex-shrink: 2;
@@ -181,7 +188,7 @@
   .info__list-h3 {
     font-family: 'OS Regular', AdobeInvisFont, MyriadPro-Regular, sans-serif;
     font-size: 14px;
-    color: @h-text;
+    color: var(--h-text);
     text-align: left;
   }
 }
@@ -195,7 +202,7 @@ button[data-action="start"],
 .wrap-tns-slider-info {
   overflow: hidden;
   max-width: 350px;
-  max-height: 550px;
+  max-height: 450px;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -206,38 +213,34 @@ button[data-action="start"],
   });
 
   .wrap-info__img {
-    //max-width: 100%;
-    max-width: 350px;
-    max-height: 550px;
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
     object-fit: cover;
   }
+}
 
-/*  .info__img {
-    //max-width: 100%;
-    max-width: 350px;
-    max-height: 550px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.wrap-tns-slider-infoSecond {
+  overflow: hidden;
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px;
 
-    .img {
-      //max-width: 100%;
-      max-width: 350px;
-      max-height: 550px;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+  .sm-block({
+    margin-right: 0;
+  });
+}
 
-    .source {
-      //max-width: 100%;
-      max-width: 350px;
-      max-height: 550px;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }*/
+/* Анимация списка - Наши основные направления*/
+.anim_info_list {
+  transition: transform 1s;
+  transform: translateX(1000px);
+  opacity: 0;
+}
+
+/* Анимация текста */
+.anim_info_text {
+  transition: transform 1s;
+  transform: translateX(-1000px) scale(0.1);
 }
