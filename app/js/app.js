@@ -1,4 +1,3 @@
-console.clear();
 window.addEventListener('load', () => {
     // Меню
     let menuData = {

@@ -1,3 +1,7 @@
+#info_anim_list {
+  overflow: hidden;
+}
+
 .info {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -115,6 +119,10 @@
 
     .md-block({
       text-align: left;
+    });
+
+    .sm-block({
+      text-align: center;
     });
 
     &::after {
@@ -250,12 +258,17 @@ button[data-action="start"],
 
   .sm-block({
     margin-right: 0;
+    margin-bottom: 40px;
+  });
+
+  .md-block({
+    max-width: 252px;
   });
 
   .anim1-element {
     width: 130px;
-    position: absolute;
     height: 253px;
+    position: absolute;
     top: -161px;
     left: -66px;
     background: url(../img/dest/provodka.webp) center center no-repeat;
@@ -266,12 +279,19 @@ button[data-action="start"],
     transform-style: preserve-3d;
     filter: grayscale(100%);
     transform: perspective(1200px) translateZ(180px) rotate(266deg);
+
+    .md-block({
+      width: 65px;
+      height: 175px;
+      top: -104px;
+      left: -26px;
+    });
   }
 
   .anim2-element {
     width: 81px;
-    position: absolute;
     height: 253px;
+    position: absolute;
     top: -127px;
     right: -73px;
     background: url(../img/dest/lamp1.webp) center center no-repeat;
@@ -282,12 +302,19 @@ button[data-action="start"],
     transform-style: preserve-3d;
     filter: grayscale(100%);
     transform: perspective(1200px) translateZ(180px) rotate(45deg);
+
+    .md-block({
+      width: 40px;
+      height: 175px;
+      top: -86px;
+      right: -17px;
+    });
   }
 
   .anim3-element {
     width: 98px;
-    position: absolute;
     height: 253px;
+    position: absolute;
     bottom: -114px;
     right: -20px;
     background: url(../img/dest/lamp2.webp) center center no-repeat;
@@ -298,12 +325,19 @@ button[data-action="start"],
     transform-style: preserve-3d;
     filter: grayscale(100%);
     transform: perspective(1200px) translateZ(180px) rotate(225deg);
+
+    .md-block({
+      width: 50px;
+      height: 175px;
+      bottom: -86px;
+      right: -14px;
+    });
   }
 
   .anim4-element {
     width: 134px;
-    position: absolute;
     height: 253px;
+    position: absolute;
     bottom: -102px;
     left: -72px;
     background: url(../img/dest/truby.webp) center center no-repeat;
@@ -314,5 +348,12 @@ button[data-action="start"],
     transform-style: preserve-3d;
     filter: grayscale(100%);
     transform: perspective(1200px) translateZ(180px);
+
+    .md-block({
+      width: 75px;
+      height: 175px;
+      bottom: -76px;
+      left: -23px;
+    });
   }
 }
