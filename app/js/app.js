@@ -1,5 +1,5 @@
+console.clear();
 window.addEventListener('load', () => {
-
     // Меню
     let menuData = {
         menu: document.querySelector('.menu'),
