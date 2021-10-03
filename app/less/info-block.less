@@ -368,29 +368,49 @@ button[data-action="start"],
 /* Анимация */
 #info_anim_text {
   position: relative;
+  z-index: 10;
+}
+
+@keyframes animBlock {
+  0% {
+    transform: perspective(2000px) rotateX(0deg) rotateY(5deg) rotateZ(245deg) translateZ(100px) translateX(-100px);
+  }
+  50% {
+    transform: perspective(2000px) rotateX(180deg) rotateY(5deg) rotateZ(245deg) translateZ(100px) translateX(-100px);
+  }
+  100% {
+    transform: perspective(2000px) rotateX(360deg) rotateY(5deg) rotateZ(245deg) translateZ(100px) translateX(-100px);
+  }
 }
 
 .wrap_animateBlockWithText {
   position: absolute;
-  top: 100px;
-  left: 100px;
-  width: 300px;
-  height: 300px;
+  z-index: 5;
+  top: 200px;
+  left: 200px;
   backface-visibility: visible;
-
   transform-style: preserve-3d;
-  transform-origin: 0 0 0;
-  transform: perspective(1200px) rotateX(5deg) rotateY(5deg);
+  transform-origin: 50% 50% 0px;
+  animation: animBlock linear 10s infinite;
+  //transform: perspective(2000px) rotateX(0deg) rotateY(5deg) rotateZ(245deg) translateZ(100px) translateX(-100px);
+
+  .lg-block({
+    display: none;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  });
 
   .animateBlockWithText__list {
     transform-style: preserve-3d;
-    transform: perspective(2000px) rotateX(298deg) rotateY(346deg) rotateZ(303deg);
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform-origin: 50% 50% 0px;
 
     .animateBlockWithText__item {
       transform-style: preserve-3d;
@@ -400,12 +420,12 @@ button[data-action="start"],
       height: 35px;
       max-height: 35px;
       overflow: hidden;
-      opacity: .9;
       box-sizing: border-box;
       border-top: 2px solid var(--main-color);
       border-bottom: 2px solid var(--main-color);
       border-left: 1.5px solid var(--main-color);
       border-right: 1.5px solid var(--main-color);
+      opacity: .5;
 
       .animateBlockWithText__text {
         font-family: 'OS Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
@@ -415,8 +435,7 @@ button[data-action="start"],
         text-transform: uppercase;
         backface-visibility: visible;
         color: var(--h-text);
-        -webkit-text-stroke: 1px var(--h-text);
-        -webkit-text-fill-color: white;
+        animation: animTextLighten ease-in-out 7s infinite;
       }
     }
 
@@ -446,10 +465,122 @@ button[data-action="start"],
 
     .item4 {
       transform-origin: 50% 50% -100px;
-      transform: translateZ(-209px) perspective(2000px);
+      transform: translateZ(-209px) perspective(2000px) scale(-1, 1);
       position: absolute;
       top: 0;
       left: 0;
     }
+  }
+}
+
+@keyframes animTextLighten {
+  0% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: 0 0 3px var(--main-color);
+  }
+
+  10% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: 0 0 3px var(--main-color);
+  }
+  15% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: 0 0 3px var(--main-color);
+  }
+  20% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: 0 0 3px var(--main-color);
+  }
+  25% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: 0 0 3px var(--main-color);
+  }
+  27% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  29% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+  30% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  31% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+  33% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  35% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+  40% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  45% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  55% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+  60% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  65% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 0 transparent;
+  }
+  70% {
+    -webkit-text-stroke: 1px var(--h-text);
+    -webkit-text-fill-color: var(--h-text);
+    text-shadow: 0 0 0 transparent;
+  }
+  75% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: 0 0 3px var(--main-color);
+  }
+  100% {
+    -webkit-text-stroke: 1px var(--main-color);
+    -webkit-text-fill-color: var(--main-color);
+    text-shadow: var(--main-color);
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .wrap_animateBlockWithText {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }

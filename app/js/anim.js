@@ -118,11 +118,17 @@ window.addEventListener('load', () => {
     }
 
     // Анимация квадрата
-    let wrap_animateBlockWithText = document.querySelector('.wrap_animateBlockWithText');
-    let x = 0
-    setInterval(function () {
-        x++
-        wrap_animateBlockWithText.style.transform = 'rotateX(' + x + 'deg)'
-    }, 35)
+    let wi = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth
+   // if (wi > 1550) {
+        /*let wrap_animateBlockWithText = document.querySelector('.wrap_animateBlockWithText');
+        let x = 0
+        setInterval(function () {
+            x++
+            wrap_animateBlockWithText.style.transform = `rotateX(${x}deg) perspective(2000px) rotateY(5deg) translateZ(100px) translateX(-100px)`;
+        }, 35)*/
+    //}
+
 })
 
