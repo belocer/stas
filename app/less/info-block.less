@@ -386,21 +386,21 @@ button[data-action="start"],
 .wrap_animateBlockWithText {
   position: absolute;
   z-index: 5;
-  top: 200px;
-  left: 200px;
+  top: 50%;
+  left: calc(50% - 100px);
   //backface-visibility: visible;
   transform-style: preserve-3d;
   transform-origin: 50% 50% 0px;
   animation: animBlock linear 10s infinite;
   //transform: perspective(2000px) rotateX(0deg) rotateY(5deg) rotateZ(245deg) translateZ(100px) translateX(-100px);
 
-  /*.lg-block({
+  .md-block({
     display: none;
     width: 0;
     height: 0;
     visibility: hidden;
     opacity: 0;
-  });*/
+  });
 
   .animateBlockWithText__list {
     transform-style: preserve-3d;

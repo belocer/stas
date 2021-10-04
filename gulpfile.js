@@ -37,7 +37,7 @@ function scripts() {
         'app/js/ScrollAnimation.js',
         'app/js/anim.js',
         'app/js/SendByEmail.js',
-        'app/js/app.js',
+        //'app/js/app.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(babel({

@@ -13,8 +13,8 @@ class ScrollAnimation {
             clearTimeout(this.varDebounce);
             this.varDebounce = setTimeout(this.startAnimate.bind(this), 150);
             this.topScroll = window.pageYOffset;
-            /* Подбор высоты срабатывания анимации в блоке по скроллу
-            console.log('-------------------------');
+            /* Подбор высоты срабатывания анимации в блоке по скроллу */
+            /*console.log('-----this.topScroll-------------this.blockInWich-------');
             console.log(this.topScroll);
             console.log(this.blockInWich);*/
         })
