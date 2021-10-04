@@ -258,7 +258,7 @@ button[data-action="start"],
   box-shadow: 0 0 40px #656565, inset 0 0 40px #656565;
   margin-right: 20px;
   transition: all .7s;
-  z-index: 10;
+  z-index: 100;
 
   .sm-block({
     margin-bottom: 40px;
@@ -388,19 +388,19 @@ button[data-action="start"],
   z-index: 5;
   top: 200px;
   left: 200px;
-  backface-visibility: visible;
+  //backface-visibility: visible;
   transform-style: preserve-3d;
   transform-origin: 50% 50% 0px;
   animation: animBlock linear 10s infinite;
   //transform: perspective(2000px) rotateX(0deg) rotateY(5deg) rotateZ(245deg) translateZ(100px) translateX(-100px);
 
-  .lg-block({
+  /*.lg-block({
     display: none;
     width: 0;
     height: 0;
     visibility: hidden;
     opacity: 0;
-  });
+  });*/
 
   .animateBlockWithText__list {
     transform-style: preserve-3d;
@@ -414,7 +414,6 @@ button[data-action="start"],
 
     .animateBlockWithText__item {
       transform-style: preserve-3d;
-      backface-visibility: revert;
       background: white;
       width: 200px;
       height: 35px;
@@ -425,7 +424,7 @@ button[data-action="start"],
       border-bottom: 2px solid var(--main-color);
       border-left: 1.5px solid var(--main-color);
       border-right: 1.5px solid var(--main-color);
-      opacity: .5;
+      //box-shadow: inset 0 0 10px black;
 
       .animateBlockWithText__text {
         font-family: 'OS Bold', AdobeInvisFont, MyriadPro-Regular, sans-serif;
@@ -433,9 +432,29 @@ button[data-action="start"],
         text-align: center;
         white-space: nowrap;
         text-transform: uppercase;
-        backface-visibility: visible;
         color: var(--h-text);
-        animation: animTextLighten ease-in-out 7s infinite;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        display: block;
+        backface-visibility: hidden;
+       // box-shadow: inset 0 0 10px black;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 200px;
+          height: 35px;
+          background: white;
+          z-index: -1;
+          backface-visibility: hidden;
+          //box-shadow: 0 0 10px black;
+        }
       }
     }
 
@@ -445,6 +464,7 @@ button[data-action="start"],
       position: absolute;
       top: 0;
       left: 0;
+      animation: animTextLighten ease-in-out 4s infinite;
     }
 
     .item2 {
@@ -453,6 +473,7 @@ button[data-action="start"],
       position: absolute;
       top: 0;
       left: 0;
+      animation: animTextLighten ease-in-out 6s infinite;
     }
 
     .item3 {
@@ -461,6 +482,7 @@ button[data-action="start"],
       position: absolute;
       top: 0;
       left: 0;
+      animation: animTextLighten ease-in-out 8s infinite;
     }
 
     .item4 {
@@ -469,6 +491,8 @@ button[data-action="start"],
       position: absolute;
       top: 0;
       left: 0;
+      animation: animTextLighten ease-in-out 10s infinite;
+      //box-shadow: inset 0 0 10px black;
     }
   }
 }
@@ -577,10 +601,10 @@ button[data-action="start"],
   }
 }
 
-@media screen and (max-width: 1550px) {
-  .wrap_animateBlockWithText {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
+
+/* Сдвигаю вниз по z элементы слайдера для анимации на js */
+.wrap-tns-slider-info {
+  pointer-events: none;
+  position: relative;
+  z-index: -10;
 }

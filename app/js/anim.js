@@ -73,8 +73,10 @@ window.addEventListener('load', () => {
             clearTimeout(varDebounce);
             varDebounce = setTimeout(() => {
                 let rect = e.target.getBoundingClientRect();
-                let x = 100 * e.offsetX / rect.width;
-                let y = 100 * e.offsetY / rect.height;
+                let offset_x = e.offsetX || e.layerX
+                let offset_y = e.offsetY || e.layerY
+                let x = 100 * offset_x / rect.width;
+                let y = 100 * offset_y / rect.height;
 
                 returnToPlace();
 
@@ -116,19 +118,5 @@ window.addEventListener('load', () => {
             arr_element.forEach(item => item.removeAttribute('style'));
         }
     }
-
-    // Анимация квадрата
-    let wi = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth
-   // if (wi > 1550) {
-        /*let wrap_animateBlockWithText = document.querySelector('.wrap_animateBlockWithText');
-        let x = 0
-        setInterval(function () {
-            x++
-            wrap_animateBlockWithText.style.transform = `rotateX(${x}deg) perspective(2000px) rotateY(5deg) translateZ(100px) translateX(-100px)`;
-        }, 35)*/
-    //}
-
 })
 
