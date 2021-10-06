@@ -14,14 +14,15 @@
 }
 
 .whyThis__list {
-  display: flex;
+  .row-flex();
   justify-content: space-evenly;
-  flex-wrap: wrap;
 
   li {
-    flex-basis: 350px;
+    flex-basis: 280px;
     text-align: center;
     margin-top: 29px;
+    .col();
+    .size(4);
 
     .lmd-block({
       flex-basis: 300px;

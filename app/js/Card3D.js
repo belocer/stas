@@ -51,7 +51,7 @@ class Card3D {
                 this.anim4.style.filter = `grayscale(0%)`;
             } else if (x > 50 && y > 50) {
                 this.card.style.transform = `perspective(1200px) rotateY(15deg) rotateX(-15deg)`;
-                this.anim3.style.transform = `perspective(1200px) translateZ(450px) translateX(15px) translateY(10px)`;
+                this.anim3.style.transform = `perspective(1200px) translateZ(550px) translateX(15px) translateY(10px)`;
                 this.anim3.style.filter = `grayscale(0%)`;
             }
         }, 10);
