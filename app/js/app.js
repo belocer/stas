@@ -7,6 +7,17 @@ window.addEventListener('load', () => {
     };
     new Menu(menuData);
 
+    // Анимируемый блок-карточка
+    let objCard3D = {
+        card: '.wrap-for-animation', // Анимируемый блок
+        anim1: '.anim1-element', // Анимируемый элемент слева сверху
+        anim2: '.anim2-element', // Анимируемый элемент справа сверху
+        anim3: '.anim3-element', // Анимируемый элемент снизу слева
+        anim4: '.anim4-element' // Анимируемый элемент снизу справа
+    }
+    new Card3D(objCard3D);
+
+    // Проверка на какой странице мы находимся если на главной ...
     if (window.location.href.split('/').length === 4) {
         // Валидация формы в header
         let objForClass = {
